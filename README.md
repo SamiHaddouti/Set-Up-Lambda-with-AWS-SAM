@@ -29,7 +29,7 @@
 
 **sam init**
 
-![Text Description automatically generated](media/image1.png)
+![Initialize SAM app](images/init.png)
 
 Process for initializing SAM App
 
@@ -44,7 +44,7 @@ Process for initializing SAM App
 
 Set timeout to 120 or more
 
-![Text Description automatically generated](media/image2.png)
+![SAM template.yaml](images/template.png)
 
 Also comment out everything involving the API from the hello world
 app-template, as we don’t need that resource and it just produces AWS
@@ -57,8 +57,8 @@ S3ReadAccess, but that can also be adjusted in AWS after deployment.
 
 Now let’s move on to adding the required dependencies
 
-![A picture containing text Description automatically
-generated](media/image3.png)
+
+![requirements.txt with all necessary dependencies](images/requirements.png)
 
 Add the packages (optional: specify version) in the requirements.txt
 
@@ -74,8 +74,8 @@ added to the dockerfile, so that they are copied into the image.
 
 **Folder Structure:**
 
-![Graphical user interface, application Description automatically
-generated](media/image4.png)
+
+![Folder structure](images/folder_structure.png)
 
 **  Dockerfile:**
 
@@ -112,7 +112,7 @@ Guided is optional, but recommended
 Just follow the steps and select the right region for deployment
 (eu-central-1)
 
- ![Text Description automatically generated](media/image5.png)
+![Deployment of SAM app](images/deploy.png)
 
 **Other great guides:**
 
@@ -133,15 +133,12 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
 
   - also always check region, especially when deploying
 
- 
 
-### For the Future: 
+**Next Steps**
 
 S3 Event Trigger
 
 <https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html>
-
-**Next Steps after POC**
 
 Step Functions for Orchestration of Lambda Functions:
 
