@@ -1,12 +1,8 @@
-# Set-Up-Lambda-with-AWS-SAM
-In this guide I want to explain how you can set up your first AWS Lambda functions with AWS SAM (Serverless Application Model).
+## Guide for setting up AWS Lambda functions with AWS SAM framework
+# In this guide I want to explain how you can set up your first AWS Lambda functions with AWS SAM (Serverless Application Model).
 
-# Data Pipeline Tools on AWS
 
-## Guide for Migrating to AWS Lambda with AWS SAM framework:
-
-We use the AWS SAM framework for the migration and set up of our tools
-in AWS Lambda, as it offers:
+Why use AWS SAM?:
 
   - development in IDE
 
@@ -27,6 +23,7 @@ in AWS Lambda, as it offers:
   - Docker
 
 <https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html>
+
 
 #### 1\. Set up Lambda Function in SAM with package type Image
 
