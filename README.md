@@ -34,7 +34,7 @@
 Process for initializing SAM App
 
   - Quick start templates/app-template doesn’t have to be hello-world,
-    but it is a good fundament
+    but it is a good foundation
 
   - base-image should be chosen according to preferred runtime
 
@@ -120,7 +120,7 @@ Just follow the steps and select the right region for deployment
 
 https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-getting-started-hello-world.html
 
-#### Errors:
+#### Potential errors:
 
 "errorMessage": "Unable to import module 'app': No module named 'app'",
 "errorType": "Runtime.ImportModuleError", "stackTrace"
@@ -128,7 +128,7 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
   - often folder structure or import problems (check dockerfile, if
     every file is being copied and imports/requirements.txt)
 
-  - potential other errors are python dependencies, that are differen in
+  - potential other errors are python dependencies, that are different in
     macOS/local environment and Linux environment (AWS Lambda)
 
   - also always check region, especially when deploying
