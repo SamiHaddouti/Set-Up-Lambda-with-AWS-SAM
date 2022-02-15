@@ -25,7 +25,7 @@
 [Guide for installing on Mac](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html)
 
 
-#### 1\. Set up Lambda Function in SAM with package type Image
+### 1\. Set up Lambda Function in SAM with package type Image
 
 **sam init**
 
@@ -42,7 +42,8 @@ Process for initializing SAM App
 
   - name is up to you
 
-#### **2. Adapt template.yaml**
+
+### 2. Adapt template.yaml
 
 Set timeout to 120 or more
 
@@ -54,10 +55,10 @@ app-template, as we don’t need that resource and it just produces cost
 If wanted you can also change the Role/Policy to for example
 S3ReadAccess, but that can also be adjusted in AWS after deployment.
 
-#### **3. Import libraries**
+
+### 3. Import libraries
 
 Now let’s move on to adding the required dependencies
-
 
 ![requirements.txt with all necessary dependencies](images/requirements.png)
 
@@ -67,7 +68,7 @@ Import them then to the app.py or other python files, where you need
 them
 
 
-#### **4. Code**
+### 4. Code
 
 To add helper functions or other python files, they also need to be
 added to the dockerfile, so that they are copied into the image.
@@ -75,14 +76,15 @@ added to the dockerfile, so that they are copied into the image.
 **  Dockerfile:**
 
 Every file to be copied into the image
-[Dockerfile](images/dockerfile.png)
+
+![Dockerfile](images/dockerfile.png)
 
 **Folder Structure:**
 
 ![Folder structure](images/folder_structure.png)
 
 
-#### **5. Build Image**
+### 5. Build Image
 
 *sam build*
 
@@ -90,7 +92,7 @@ builds Docker Image
 
  
 
-#### **6. Test Locally**
+### 6. Test Locally
 
 
 *sam local invoke*
@@ -98,7 +100,7 @@ builds Docker Image
 Runs Image and tests locally
 
 
-#### **7. Deploy to AWS**
+### 7. Deploy to AWS
 
 
 *sam deploy –guided*
