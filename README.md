@@ -131,13 +131,13 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
   - also always check region, especially when deploying
 
 
-**Next Steps**
+#### Next Steps:
 
-S3 Event Trigger
+**S3 Event Trigger:**
 
 [AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html)
 
-Step Functions for Orchestration of Lambda Functions:
+**Step Functions for Orchestration of Lambda Functions:**
 
 [My Guide](https://github.com/SamiHaddouti/Orchestrate-Lambda-Functions-with-Step-Functions)
 
