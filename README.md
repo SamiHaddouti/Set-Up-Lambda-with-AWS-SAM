@@ -1,5 +1,5 @@
 # Guide for setting up AWS Lambda functions with AWS SAM framework
-### In this guide I want to explain how you can set up your first AWS Lambda functions in Python with AWS SAM (Serverless Application Model).
+## In this guide I want to explain how you can set up your first AWS Lambda functions in Python with AWS SAM (Serverless Application Model).
 
 
 **Why use AWS SAM?:**
