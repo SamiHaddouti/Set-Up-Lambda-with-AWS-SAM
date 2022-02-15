@@ -1,5 +1,5 @@
 # Guide for setting up AWS Lambda functions with AWS SAM framework
-## In this guide I want to explain how you can set up your first AWS Lambda functions with AWS SAM (Serverless Application Model).
+## In this guide I want to explain how you can set up your first AWS Lambda functions in Python with AWS SAM (Serverless Application Model).
 
 
 **Why use AWS SAM?:**
@@ -22,7 +22,7 @@
 
   - Docker
 
-<https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html>
+[Guide for installing on Mac](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/serverless-sam-cli-install-mac.html)
 
 
 #### 1\. Set up Lambda Function in SAM with package type Image
@@ -32,6 +32,8 @@
 ![Initialize SAM app](images/init.png)
 
 Process for initializing SAM App
+
+  - Chose desired runtime version
 
   - Quick start templates/app-template doesn’t have to be hello-world,
     but it is a good foundation
@@ -46,9 +48,8 @@ Set timeout to 120 or more
 
 ![SAM template.yaml](images/template.png)
 
-Also comment out everything involving the API from the hello world
-app-template, as we don’t need that resource and it just produces AWS
-cost
+Also comment out or delete everything involving the API from the hello world
+app-template, as we don’t need that resource and it just produces cost
 
 If wanted you can also change the Role/Policy to for example
 S3ReadAccess, but that can also be adjusted in AWS after deployment.
@@ -60,28 +61,26 @@ Now let’s move on to adding the required dependencies
 
 ![requirements.txt with all necessary dependencies](images/requirements.png)
 
-Add the packages (optional: specify version) in the requirements.txt
+Add the packages and specify version in the requirements.txt
 
 Import them then to the app.py or other python files, where you need
 them
 
- 
 
 #### **4. Code**
 
 To add helper functions or other python files, they also need to be
 added to the dockerfile, so that they are copied into the image.
 
-**Folder Structure:**
+**  Dockerfile:**
 
+Every file to be copied into the image
+[Dockerfile](images/dockerfile.png)
+
+**Folder Structure:**
 
 ![Folder structure](images/folder_structure.png)
 
-**  Dockerfile:**
-
-*COPY app.py **helper\_functions.py** requirements.txt ./*
-
-Every file to be copied into the image
 
 #### **5. Build Image**
 
@@ -93,17 +92,14 @@ builds Docker Image
 
 #### **6. Test Locally**
 
- 
 
 *sam local invoke*
 
 Runs Image and tests locally
 
- 
 
 #### **7. Deploy to AWS**
 
- 
 
 *sam deploy –guided*
 
@@ -113,6 +109,7 @@ Just follow the steps and select the right region for deployment
 (eu-central-1)
 
 ![Deployment of SAM app](images/deploy.png)
+
 
 **Other great guides:**
 
@@ -138,8 +135,10 @@ https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/s
 
 S3 Event Trigger
 
-<https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html>
+[AWS Docs](https://docs.aws.amazon.com/lambda/latest/dg/with-s3-example.html)
 
 Step Functions for Orchestration of Lambda Functions:
 
-<https://www.youtube.com/watch?v=KcoLDAhLpbg>
+[My Guide](https://github.com/SamiHaddouti/Orchestrate-Lambda-Functions-with-Step-Functions)
+
+[Youtube Guide](https://www.youtube.com/watch?v=KcoLDAhLpbg)
